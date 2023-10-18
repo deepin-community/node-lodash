@@ -1,5 +1,319 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-9) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * Drop useless webpack plugin (Closes: #1003504)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Yadd <yadd@debian.org>  Mon, 23 May 2022 17:50:01 +0200
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-8) unstable; urgency=medium
+
+  * Team upload
+  * Skip useless build-dist and copy the file manually. Closes: #1007858.
+  * fp generation: do not call minify
+  * rules: generate dist/ files and clean them
+  * copyright: exclude all dist dir
+
+ -- Jérémy Lal <kapouer@melix.org>  Thu, 07 Apr 2022 01:32:16 +0200
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-7) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest (ignore lodash-cli in require test)
+  * Revert "Disable internal minifier"
+
+ -- Yadd <yadd@debian.org>  Wed, 06 Apr 2022 17:23:27 +0200
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-6) experimental; urgency=medium
+
+  * Team upload
+  * Remove unused license definitions for BSD-3-clause-Parakey, public-domain.
+  * Disable internal minifier (may close #1007858)
+
+ -- Yadd <yadd@debian.org>  Sat, 19 Mar 2022 08:31:16 +0100
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-5) unstable; urgency=medium
+
+  * Team upload
+  * Fix bad Provides field
+
+ -- Yadd <yadd@debian.org>  Fri, 10 Dec 2021 14:25:39 +0100
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-4) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests
+  * Remove superfluous copyright entries (files excluded)
+  * Update lintian overrides
+
+ -- Yadd <yadd@debian.org>  Wed, 08 Dec 2021 14:34:35 +0100
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-3) experimental; urgency=medium
+
+  * Team upload
+  * Fix install
+
+ -- Yadd <yadd@debian.org>  Wed, 08 Dec 2021 09:49:14 +0100
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-2) experimental; urgency=medium
+
+  * Team upload
+  * Fix install
+
+ -- Yadd <yadd@debian.org>  Sun, 28 Nov 2021 15:24:21 +0100
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-1) experimental; urgency=medium
+
+  * Team upload
+  * Update nodejs dependency to nodejs:any
+  * Embed lodash-packages typescript definitions (Closes: #1000722)
+  * New upstream version 4.17.21+dfsg+~cs8.31.198.20210220
+  * Use dh-sequence-nodejs
+  * Fix Provides field
+  * Rebuild lodash.core.min.js
+  * Add lintian overrides
+
+ -- Yadd <yadd@debian.org>  Sun, 28 Nov 2021 14:43:42 +0100
+
+node-lodash (4.17.21+dfsg+~cs8.31.196.20210220-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest
+
+ -- Yadd <yadd@debian.org>  Wed, 06 Oct 2021 18:05:04 +0200
+
+node-lodash (4.17.21+dfsg+~cs8.31.196.20210220-1) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.0, no changes needed.
+  * Exclude vendor/ dir from import (Closes: #995722)
+  * New upstream version 4.17.21+dfsg+~cs8.31.196.20210220
+
+ -- Yadd <yadd@debian.org>  Wed, 06 Oct 2021 15:21:51 +0200
+
+node-lodash (4.17.21+dfsg+~cs8.31.189.20210220-3) unstable; urgency=medium
+
+  * Team upload
+  * MA: foreign
+  * Remove nodejs depends (no binary so safe)
+  * Improve watch file
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 04 Oct 2021 15:28:14 +0000
+
+node-lodash (4.17.21+dfsg+~cs8.31.189.20210220-2) unstable; urgency=medium
+
+  * Reupload to unstable
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 16 Aug 2021 00:45:34 +0530
+
+node-lodash (4.17.21+dfsg+~cs8.31.189.20210220-1) experimental; urgency=medium
+
+  [ Yadd ]
+  * Fix GitHub tags regex
+
+  [ Pirate Praveen ]
+  * Update watch file to use a maintained fork of lodash-cli (thanks to Akshay)
+  * New upstream version 4.17.21+dfsg+~cs8.31.189.20210220
+  * The patch add-isArray is now included in upstream (Thanks to Akshay)
+
+  [ Akshay S Dinesh ]
+  * Fix fp modules build (Closes: #979531)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 20 Apr 2021 19:42:01 +0530
+
+node-lodash (4.17.21+dfsg+~cs8.31.173-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Fix symbolic link for lodash.fp.js
+
+  [ Yadd ]
+  * Add ctype=nodejs to component(s)
+  * New upstream version 4.17.21+dfsg+~cs8.31.173
+    (Closes: #985086, CVE-2021-23337 CVE-2020-28500)
+  * Refresh patches
+
+ -- Yadd <yadd@debian.org>  Sat, 13 Mar 2021 08:08:00 +0100
+
+node-lodash (4.17.20+dfsg+~cs8.31.172-1) unstable; urgency=medium
+
+  * Build lodash/fp variant and refeactor build scripts
+  * New upstream version 4.17.20+dfsg+~cs8.31.172
+    (exclude generated files from dist)
+  * Refresh patches (add comment for patch)
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 07 Jan 2021 11:14:03 +0000
+
+node-lodash (4.17.20+dfsg+~cs8.31.170-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.1
+  * Embed @types/lodash and repack
+    Upstream version 4.17.20+dfsg+~cs8.31.170, no other changes
+  * Add breaks against node-typescript-types < 20201117~
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 17 Nov 2020 09:47:07 +0100
+
+node-lodash (4.17.20+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 13
+  * New upstream version 4.17.20+dfsg
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 14 Oct 2020 05:45:04 +0200
+
+node-lodash (4.17.19+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version 4.17.19+dfsg1 (manually update lodash-cli from git
+    master as no upstream tag or no recent npm releases)
+  * Include patch to add isArray as dependency of baseOrderBy in lodash-cli
+    (Closes: #965353)
+  * Update description to make it suitable for Debian (Closes: #934706)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 28 Jul 2020 13:03:40 +0530
+
+node-lodash (4.17.19+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 4.17.19+dfsg (Closes: #965283, CVE-2020-8203)
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 19 Jul 2020 08:13:53 +0200
+
+node-lodash (4.17.15+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set field Upstream-Contact in debian/copyright.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Fix deprecation warning about "root" (Closes: #935845)
+  * Install upstream lodash.js, not a custom one (Closes: #949615)
+  * Mention component source (Closes: #943389)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 30 Jan 2020 06:25:45 +0100
+
+node-lodash (4.17.15+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Update gbp.conf
+  * New upstream version 4.17.15+dfsg (Closes: #933079, CVE-2019-10744)
+  * Update debian/copyright
+  * Install in /usr/share/nodejs
+  * Update debian/clean
+  * Allow stderr output in autopkgtest "require" test. Fixes debci
+  * Remove LICENSE and README.md files in node-lodash-packages
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 13 Aug 2019 17:47:38 +0200
+
+node-lodash (4.17.11+dfsg-4) unstable; urgency=medium
+
+  [ Xavier Guimard ]
+  * Fix "Files-Excluded" field
+
+  [ Pirate Praveen ]
+  * Reupload to unstable
+  * Bump Standards-Version to 4.4.0 (no changes needed)
+  * Switch to uglifyjs.terser
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 05 Aug 2019 05:40:03 +0000
+
+node-lodash (4.17.11+dfsg-3) experimental; urgency=medium
+
+  [ Xavier Guimard ]
+  * Add upstream/metadata
+  * Update URLs to https
+  * Use debian/clean to clean build
+  * Fix debian/watch
+
+  [ Pirate Praveen ]
+  * Generate ES modules and provide node-lodash-es
+  * Drop debian/node_modules in favor of multiple tarballs
+
+ -- Pirate Praveen <praveen@debian.org>  Thu, 27 Jun 2019 18:34:57 +0530
+
+node-lodash (4.17.11+dfsg-2) unstable; urgency=medium
+
+  * Drop modules directory (now generated from source)
+  * Embed lodash-cli module
+  * Don't gitignore debian/node_modules
+  * Generate split npm packages and files for lodash node module
+  * Add node-lodash-packages binary (Closes: #873016)
+
+ -- Pirate Praveen <praveen@debian.org>  Mon, 18 Feb 2019 15:31:23 +0530
+
+node-lodash (4.17.11+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 21 Sep 2018 17:15:00 +0530
+
+node-lodash (4.17.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Add debian/README.Debian to explain steps of using multi orig tarballs
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 22 Aug 2017 22:54:01 +0530
+
+node-lodash (4.16.6+dfsg-2) unstable; urgency=medium
+
+  * Include per method js files (Closes: #849275)
+  * Add myself to uploaders
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 25 Dec 2016 12:58:16 +0530
+
+node-lodash (4.16.6+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Paolo Greppi ]
+  * Fix build when /bin/sh is set to bash (see #841698).
+
+  [ Sruthi Chandran ]
+  * New upstream release (Closes: #842589)
+  * Use gitlab mirror in debian/watch (github.com tag page cannot show
+    latest releases)
+
+ -- Sruthi Chandran <srud@disroot.org>  Thu, 10 Nov 2016 22:41:04 +0530
+
+node-lodash (4.3.0+dfsg-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Clean up debian/copyright
+
+ -- Valentin OVD <valentin.ovd@live.fr>  Fri, 12 Feb 2016 15:02:12 +0200
+node-lodash (3.9.3+dfsg-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #805282).
+  * Ran wrap-and-sort -t -a.
+  * Added public-domain license in debian/copyright.
+  * Standards-Version is now 3.9.6.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 16 Nov 2015 11:37:25 +0000
+
+node-lodash (2.4.1+dfsg-3) unstable; urgency=low
+
+  * Add the missing licence (Closes: #751583)
+
+ -- Valentin OVD <valentin.ovd@live.fr>  Thu, 19 Jun 2014 17:08:03 +0200
+
+node-lodash (2.4.1+dfsg-2) unstable; urgency=low
+
+  * Move javascript-common from recommends to depends for libjs-lodash
+
+ -- Valentin OVD <valentin.ovd@live.fr>  Thu, 12 Jun 2014 16:19:58 +0200
+
+node-lodash (2.4.1+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #748610)
+
+ -- Valentin OVD <valentin.ovd@live.fr>  Mon, 12 May 2014 16:19:58 +0200

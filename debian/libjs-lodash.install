@@ -1,0 +1,5 @@
+dist/lodash.js		usr/share/javascript/lodash/
+dist/lodash.min.js	usr/share/javascript/lodash/
+dist/lodash.fp.js	usr/share/javascript/lodash/fp/
+dist/lodash.fp.min.js	usr/share/javascript/lodash/fp/
+dist/mapping.fp.js	usr/share/javascript/lodash/fp/

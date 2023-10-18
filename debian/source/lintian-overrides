@@ -1,0 +1,9 @@
+# False positive
+source-package-component-has-long-file-name node-lodash*
+add-component-copyright lodash-cli *
+add-component-copyright types-* *
+prefer-uscan-symlink filenamemangle *
+very-long-line-length-in-source-file debian/gbp.conf *
+
+# Rebuilt
+very-long-line-length-in-source-file dist/lodash.core.min.js line *

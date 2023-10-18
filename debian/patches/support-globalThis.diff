@@ -1,0 +1,58 @@
+Description: Add support for globalThis when detecting global object
+ Inspired from https://github.com/lodash/lodash/pull/4347/files
+Author: Xavier Guimard <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/935845
+Forwarded: not-needed
+Last-Update: 2020-01-30
+
+--- a/dist/lodash.core.js
++++ b/dist/lodash.core.js
+@@ -64,11 +64,14 @@
+   /** Detect free variable `global` from Node.js. */
+   var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+ 
++  /** Detect free variable `globalThis` */
++  const freeGlobalThis = typeof globalThis == 'object' && globalThis !== null && globalThis.Object == Object && globalThis;
++
+   /** Detect free variable `self`. */
+   var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+ 
+   /** Used as a reference to the global object. */
+-  var root = freeGlobal || freeSelf || Function('return this')();
++  var root = freeGlobalThis || freeGlobal || freeSelf || Function('return this')();
+ 
+   /** Detect free variable `exports`. */
+   var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+--- a/lodash-cli/bin/lodash
++++ b/lodash-cli/bin/lodash
+@@ -727,9 +727,11 @@
+     '',
+     "  var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;",
+     '',
++    " var freeGlobalThis = typeof globalThis == 'object' && globalThis !== null && globalThis.Object == Object && globalThis;",
++    '',
+     "  var freeSelf = typeof self == 'object' && self && self.Object === Object && self;",
+     '',
+-    "  var root = freeGlobal || freeSelf || Function('return this')();",
++    "  var root = freeGlobalThis || freeGlobal || freeSelf || Function('return this')();",
+     '',
+     "  var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;",
+     '',
+--- a/lodash.js
++++ b/lodash.js
+@@ -429,11 +429,14 @@
+   /** Detect free variable `global` from Node.js. */
+   var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+ 
++  /** Detect free variable `globalThis` */
++  const freeGlobalThis = typeof globalThis == 'object' && globalThis !== null && globalThis.Object == Object && globalThis;
++
+   /** Detect free variable `self`. */
+   var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+ 
+   /** Used as a reference to the global object. */
+-  var root = freeGlobal || freeSelf || Function('return this')();
++  var root = freeGlobalThis || freeGlobal || freeSelf || Function('return this')();
+ 
+   /** Detect free variable `exports`. */
+   var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;

@@ -1,0 +1,883 @@
+version=4
+
+opts=\
+repacksuffix=+dfsg,\
+repack,\
+filenamemangle=s%(?:.*?/)??v?(@ANY_VERSION@@ARCHIVE_EXT@)%@PACKAGE@-$1%,\
+dversionmangle=auto,\
+uversionmangle=s%^@ANY_VERSION@-(es|npm)$%$1~$2% \
+https://github.com/lodash/lodash/tags (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@ group
+
+opts=\
+mode=git,\
+pretty=4.17.21.%cd,\
+pgpmode=none,\
+ctype=nodejs,\
+component=lodash-cli,\
+filenamemangle=s/.*?(@ANY_VERSION@@ARCHIVE_EXT@)/@PACKAGE@-$1/ \
+https://github.com/bnjmnt4n/lodash-cli HEAD checksum
+
+opts=searchmode=plain,ctype=nodejs,component=types-lodash,pgpmode=none,\
+ filenamemangle=s%(?:.*?)-?(@ANY_VERSION@@ARCHIVE_EXT@)%node-types-lodash-$1% \
+ https://registry.npmjs.org/@types/lodash https://registry.npmjs.org/@types/lodash/-/lodash-@ANY_VERSION@@ARCHIVE_EXT@ checksum
+
+opts="searchmode=plain,component=types-lodash-add,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-add-$1/" \
+ https://registry.npmjs.org/@types/lodash.add https://registry.npmjs.org/@types/lodash.add/-/lodash.add-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-after,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-after-$1/" \
+ https://registry.npmjs.org/@types/lodash.after https://registry.npmjs.org/@types/lodash.after/-/lodash.after-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-ary,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-ary-$1/" \
+ https://registry.npmjs.org/@types/lodash.ary https://registry.npmjs.org/@types/lodash.ary/-/lodash.ary-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-assign,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-assign-$1/" \
+ https://registry.npmjs.org/@types/lodash.assign https://registry.npmjs.org/@types/lodash.assign/-/lodash.assign-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-assignin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-assignin-$1/" \
+ https://registry.npmjs.org/@types/lodash.assignin https://registry.npmjs.org/@types/lodash.assignin/-/lodash.assignin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-assigninwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-assigninwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.assigninwith https://registry.npmjs.org/@types/lodash.assigninwith/-/lodash.assigninwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-assignwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-assignwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.assignwith https://registry.npmjs.org/@types/lodash.assignwith/-/lodash.assignwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-at,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-at-$1/" \
+ https://registry.npmjs.org/@types/lodash.at https://registry.npmjs.org/@types/lodash.at/-/lodash.at-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-attempt,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-attempt-$1/" \
+ https://registry.npmjs.org/@types/lodash.attempt https://registry.npmjs.org/@types/lodash.attempt/-/lodash.attempt-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-before,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-before-$1/" \
+ https://registry.npmjs.org/@types/lodash.before https://registry.npmjs.org/@types/lodash.before/-/lodash.before-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-bind,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-bind-$1/" \
+ https://registry.npmjs.org/@types/lodash.bind https://registry.npmjs.org/@types/lodash.bind/-/lodash.bind-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-bindall,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-bindall-$1/" \
+ https://registry.npmjs.org/@types/lodash.bindall https://registry.npmjs.org/@types/lodash.bindall/-/lodash.bindall-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-bindkey,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-bindkey-$1/" \
+ https://registry.npmjs.org/@types/lodash.bindkey https://registry.npmjs.org/@types/lodash.bindkey/-/lodash.bindkey-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-camelcase,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-camelcase-$1/" \
+ https://registry.npmjs.org/@types/lodash.camelcase https://registry.npmjs.org/@types/lodash.camelcase/-/lodash.camelcase-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-capitalize,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-capitalize-$1/" \
+ https://registry.npmjs.org/@types/lodash.capitalize https://registry.npmjs.org/@types/lodash.capitalize/-/lodash.capitalize-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-castarray,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-castarray-$1/" \
+ https://registry.npmjs.org/@types/lodash.castarray https://registry.npmjs.org/@types/lodash.castarray/-/lodash.castarray-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-ceil,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-ceil-$1/" \
+ https://registry.npmjs.org/@types/lodash.ceil https://registry.npmjs.org/@types/lodash.ceil/-/lodash.ceil-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-chunk,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-chunk-$1/" \
+ https://registry.npmjs.org/@types/lodash.chunk https://registry.npmjs.org/@types/lodash.chunk/-/lodash.chunk-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-clamp,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-clamp-$1/" \
+ https://registry.npmjs.org/@types/lodash.clamp https://registry.npmjs.org/@types/lodash.clamp/-/lodash.clamp-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-clone,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-clone-$1/" \
+ https://registry.npmjs.org/@types/lodash.clone https://registry.npmjs.org/@types/lodash.clone/-/lodash.clone-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-clonedeep,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-clonedeep-$1/" \
+ https://registry.npmjs.org/@types/lodash.clonedeep https://registry.npmjs.org/@types/lodash.clonedeep/-/lodash.clonedeep-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-clonedeepwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-clonedeepwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.clonedeepwith https://registry.npmjs.org/@types/lodash.clonedeepwith/-/lodash.clonedeepwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-clonewith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-clonewith-$1/" \
+ https://registry.npmjs.org/@types/lodash.clonewith https://registry.npmjs.org/@types/lodash.clonewith/-/lodash.clonewith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-compact,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-compact-$1/" \
+ https://registry.npmjs.org/@types/lodash.compact https://registry.npmjs.org/@types/lodash.compact/-/lodash.compact-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-concat,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-concat-$1/" \
+ https://registry.npmjs.org/@types/lodash.concat https://registry.npmjs.org/@types/lodash.concat/-/lodash.concat-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-cond,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-cond-$1/" \
+ https://registry.npmjs.org/@types/lodash.cond https://registry.npmjs.org/@types/lodash.cond/-/lodash.cond-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-constant,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-constant-$1/" \
+ https://registry.npmjs.org/@types/lodash.constant https://registry.npmjs.org/@types/lodash.constant/-/lodash.constant-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-countby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-countby-$1/" \
+ https://registry.npmjs.org/@types/lodash.countby https://registry.npmjs.org/@types/lodash.countby/-/lodash.countby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-create,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-create-$1/" \
+ https://registry.npmjs.org/@types/lodash.create https://registry.npmjs.org/@types/lodash.create/-/lodash.create-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-curry,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-curry-$1/" \
+ https://registry.npmjs.org/@types/lodash.curry https://registry.npmjs.org/@types/lodash.curry/-/lodash.curry-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-curryright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-curryright-$1/" \
+ https://registry.npmjs.org/@types/lodash.curryright https://registry.npmjs.org/@types/lodash.curryright/-/lodash.curryright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-debounce,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-debounce-$1/" \
+ https://registry.npmjs.org/@types/lodash.debounce https://registry.npmjs.org/@types/lodash.debounce/-/lodash.debounce-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-deburr,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-deburr-$1/" \
+ https://registry.npmjs.org/@types/lodash.deburr https://registry.npmjs.org/@types/lodash.deburr/-/lodash.deburr-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-defaults,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-defaults-$1/" \
+ https://registry.npmjs.org/@types/lodash.defaults https://registry.npmjs.org/@types/lodash.defaults/-/lodash.defaults-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-defaultsdeep,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-defaultsdeep-$1/" \
+ https://registry.npmjs.org/@types/lodash.defaultsdeep https://registry.npmjs.org/@types/lodash.defaultsdeep/-/lodash.defaultsdeep-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-defer,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-defer-$1/" \
+ https://registry.npmjs.org/@types/lodash.defer https://registry.npmjs.org/@types/lodash.defer/-/lodash.defer-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-delay,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-delay-$1/" \
+ https://registry.npmjs.org/@types/lodash.delay https://registry.npmjs.org/@types/lodash.delay/-/lodash.delay-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-difference,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-difference-$1/" \
+ https://registry.npmjs.org/@types/lodash.difference https://registry.npmjs.org/@types/lodash.difference/-/lodash.difference-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-differenceby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-differenceby-$1/" \
+ https://registry.npmjs.org/@types/lodash.differenceby https://registry.npmjs.org/@types/lodash.differenceby/-/lodash.differenceby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-differencewith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-differencewith-$1/" \
+ https://registry.npmjs.org/@types/lodash.differencewith https://registry.npmjs.org/@types/lodash.differencewith/-/lodash.differencewith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-divide,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-divide-$1/" \
+ https://registry.npmjs.org/@types/lodash.divide https://registry.npmjs.org/@types/lodash.divide/-/lodash.divide-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-drop,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-drop-$1/" \
+ https://registry.npmjs.org/@types/lodash.drop https://registry.npmjs.org/@types/lodash.drop/-/lodash.drop-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-dropright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-dropright-$1/" \
+ https://registry.npmjs.org/@types/lodash.dropright https://registry.npmjs.org/@types/lodash.dropright/-/lodash.dropright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-droprightwhile,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-droprightwhile-$1/" \
+ https://registry.npmjs.org/@types/lodash.droprightwhile https://registry.npmjs.org/@types/lodash.droprightwhile/-/lodash.droprightwhile-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-dropwhile,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-dropwhile-$1/" \
+ https://registry.npmjs.org/@types/lodash.dropwhile https://registry.npmjs.org/@types/lodash.dropwhile/-/lodash.dropwhile-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-endswith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-endswith-$1/" \
+ https://registry.npmjs.org/@types/lodash.endswith https://registry.npmjs.org/@types/lodash.endswith/-/lodash.endswith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-eq,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-eq-$1/" \
+ https://registry.npmjs.org/@types/lodash.eq https://registry.npmjs.org/@types/lodash.eq/-/lodash.eq-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-escape,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-escape-$1/" \
+ https://registry.npmjs.org/@types/lodash.escape https://registry.npmjs.org/@types/lodash.escape/-/lodash.escape-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-escaperegexp,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-escaperegexp-$1/" \
+ https://registry.npmjs.org/@types/lodash.escaperegexp https://registry.npmjs.org/@types/lodash.escaperegexp/-/lodash.escaperegexp-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-every,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-every-$1/" \
+ https://registry.npmjs.org/@types/lodash.every https://registry.npmjs.org/@types/lodash.every/-/lodash.every-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-fill,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-fill-$1/" \
+ https://registry.npmjs.org/@types/lodash.fill https://registry.npmjs.org/@types/lodash.fill/-/lodash.fill-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-filter,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-filter-$1/" \
+ https://registry.npmjs.org/@types/lodash.filter https://registry.npmjs.org/@types/lodash.filter/-/lodash.filter-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-find,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-find-$1/" \
+ https://registry.npmjs.org/@types/lodash.find https://registry.npmjs.org/@types/lodash.find/-/lodash.find-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-findindex,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-findindex-$1/" \
+ https://registry.npmjs.org/@types/lodash.findindex https://registry.npmjs.org/@types/lodash.findindex/-/lodash.findindex-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-findkey,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-findkey-$1/" \
+ https://registry.npmjs.org/@types/lodash.findkey https://registry.npmjs.org/@types/lodash.findkey/-/lodash.findkey-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-findlast,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-findlast-$1/" \
+ https://registry.npmjs.org/@types/lodash.findlast https://registry.npmjs.org/@types/lodash.findlast/-/lodash.findlast-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-findlastindex,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-findlastindex-$1/" \
+ https://registry.npmjs.org/@types/lodash.findlastindex https://registry.npmjs.org/@types/lodash.findlastindex/-/lodash.findlastindex-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-findlastkey,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-findlastkey-$1/" \
+ https://registry.npmjs.org/@types/lodash.findlastkey https://registry.npmjs.org/@types/lodash.findlastkey/-/lodash.findlastkey-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flatmap,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flatmap-$1/" \
+ https://registry.npmjs.org/@types/lodash.flatmap https://registry.npmjs.org/@types/lodash.flatmap/-/lodash.flatmap-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flatmapdeep,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flatmapdeep-$1/" \
+ https://registry.npmjs.org/@types/lodash.flatmapdeep https://registry.npmjs.org/@types/lodash.flatmapdeep/-/lodash.flatmapdeep-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flatmapdepth,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flatmapdepth-$1/" \
+ https://registry.npmjs.org/@types/lodash.flatmapdepth https://registry.npmjs.org/@types/lodash.flatmapdepth/-/lodash.flatmapdepth-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flatten,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flatten-$1/" \
+ https://registry.npmjs.org/@types/lodash.flatten https://registry.npmjs.org/@types/lodash.flatten/-/lodash.flatten-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flattendeep,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flattendeep-$1/" \
+ https://registry.npmjs.org/@types/lodash.flattendeep https://registry.npmjs.org/@types/lodash.flattendeep/-/lodash.flattendeep-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flattendepth,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flattendepth-$1/" \
+ https://registry.npmjs.org/@types/lodash.flattendepth https://registry.npmjs.org/@types/lodash.flattendepth/-/lodash.flattendepth-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flip,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flip-$1/" \
+ https://registry.npmjs.org/@types/lodash.flip https://registry.npmjs.org/@types/lodash.flip/-/lodash.flip-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-floor,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-floor-$1/" \
+ https://registry.npmjs.org/@types/lodash.floor https://registry.npmjs.org/@types/lodash.floor/-/lodash.floor-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flow,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flow-$1/" \
+ https://registry.npmjs.org/@types/lodash.flow https://registry.npmjs.org/@types/lodash.flow/-/lodash.flow-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-flowright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-flowright-$1/" \
+ https://registry.npmjs.org/@types/lodash.flowright https://registry.npmjs.org/@types/lodash.flowright/-/lodash.flowright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-foreach,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-foreach-$1/" \
+ https://registry.npmjs.org/@types/lodash.foreach https://registry.npmjs.org/@types/lodash.foreach/-/lodash.foreach-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-foreachright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-foreachright-$1/" \
+ https://registry.npmjs.org/@types/lodash.foreachright https://registry.npmjs.org/@types/lodash.foreachright/-/lodash.foreachright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-forin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-forin-$1/" \
+ https://registry.npmjs.org/@types/lodash.forin https://registry.npmjs.org/@types/lodash.forin/-/lodash.forin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-forinright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-forinright-$1/" \
+ https://registry.npmjs.org/@types/lodash.forinright https://registry.npmjs.org/@types/lodash.forinright/-/lodash.forinright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-forown,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-forown-$1/" \
+ https://registry.npmjs.org/@types/lodash.forown https://registry.npmjs.org/@types/lodash.forown/-/lodash.forown-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-forownright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-forownright-$1/" \
+ https://registry.npmjs.org/@types/lodash.forownright https://registry.npmjs.org/@types/lodash.forownright/-/lodash.forownright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-frompairs,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-frompairs-$1/" \
+ https://registry.npmjs.org/@types/lodash.frompairs https://registry.npmjs.org/@types/lodash.frompairs/-/lodash.frompairs-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-functions,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-functions-$1/" \
+ https://registry.npmjs.org/@types/lodash.functions https://registry.npmjs.org/@types/lodash.functions/-/lodash.functions-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-functionsin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-functionsin-$1/" \
+ https://registry.npmjs.org/@types/lodash.functionsin https://registry.npmjs.org/@types/lodash.functionsin/-/lodash.functionsin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-get,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-get-$1/" \
+ https://registry.npmjs.org/@types/lodash.get https://registry.npmjs.org/@types/lodash.get/-/lodash.get-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-groupby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-groupby-$1/" \
+ https://registry.npmjs.org/@types/lodash.groupby https://registry.npmjs.org/@types/lodash.groupby/-/lodash.groupby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-gt,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-gt-$1/" \
+ https://registry.npmjs.org/@types/lodash.gt https://registry.npmjs.org/@types/lodash.gt/-/lodash.gt-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-gte,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-gte-$1/" \
+ https://registry.npmjs.org/@types/lodash.gte https://registry.npmjs.org/@types/lodash.gte/-/lodash.gte-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-has,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-has-$1/" \
+ https://registry.npmjs.org/@types/lodash.has https://registry.npmjs.org/@types/lodash.has/-/lodash.has-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-hasin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-hasin-$1/" \
+ https://registry.npmjs.org/@types/lodash.hasin https://registry.npmjs.org/@types/lodash.hasin/-/lodash.hasin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-head,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-head-$1/" \
+ https://registry.npmjs.org/@types/lodash.head https://registry.npmjs.org/@types/lodash.head/-/lodash.head-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-identity,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-identity-$1/" \
+ https://registry.npmjs.org/@types/lodash.identity https://registry.npmjs.org/@types/lodash.identity/-/lodash.identity-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-includes,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-includes-$1/" \
+ https://registry.npmjs.org/@types/lodash.includes https://registry.npmjs.org/@types/lodash.includes/-/lodash.includes-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-indexof,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-indexof-$1/" \
+ https://registry.npmjs.org/@types/lodash.indexof https://registry.npmjs.org/@types/lodash.indexof/-/lodash.indexof-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-initial,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-initial-$1/" \
+ https://registry.npmjs.org/@types/lodash.initial https://registry.npmjs.org/@types/lodash.initial/-/lodash.initial-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-inrange,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-inrange-$1/" \
+ https://registry.npmjs.org/@types/lodash.inrange https://registry.npmjs.org/@types/lodash.inrange/-/lodash.inrange-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-intersection,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-intersection-$1/" \
+ https://registry.npmjs.org/@types/lodash.intersection https://registry.npmjs.org/@types/lodash.intersection/-/lodash.intersection-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-intersectionby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-intersectionby-$1/" \
+ https://registry.npmjs.org/@types/lodash.intersectionby https://registry.npmjs.org/@types/lodash.intersectionby/-/lodash.intersectionby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-intersectionwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-intersectionwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.intersectionwith https://registry.npmjs.org/@types/lodash.intersectionwith/-/lodash.intersectionwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-invert,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-invert-$1/" \
+ https://registry.npmjs.org/@types/lodash.invert https://registry.npmjs.org/@types/lodash.invert/-/lodash.invert-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-invertby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-invertby-$1/" \
+ https://registry.npmjs.org/@types/lodash.invertby https://registry.npmjs.org/@types/lodash.invertby/-/lodash.invertby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-invoke,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-invoke-$1/" \
+ https://registry.npmjs.org/@types/lodash.invoke https://registry.npmjs.org/@types/lodash.invoke/-/lodash.invoke-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-invokemap,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-invokemap-$1/" \
+ https://registry.npmjs.org/@types/lodash.invokemap https://registry.npmjs.org/@types/lodash.invokemap/-/lodash.invokemap-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isarguments,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isarguments-$1/" \
+ https://registry.npmjs.org/@types/lodash.isarguments https://registry.npmjs.org/@types/lodash.isarguments/-/lodash.isarguments-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isarray,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isarray-$1/" \
+ https://registry.npmjs.org/@types/lodash.isarray https://registry.npmjs.org/@types/lodash.isarray/-/lodash.isarray-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isarraybuffer,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isarraybuffer-$1/" \
+ https://registry.npmjs.org/@types/lodash.isarraybuffer https://registry.npmjs.org/@types/lodash.isarraybuffer/-/lodash.isarraybuffer-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isarraylike,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isarraylike-$1/" \
+ https://registry.npmjs.org/@types/lodash.isarraylike https://registry.npmjs.org/@types/lodash.isarraylike/-/lodash.isarraylike-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isarraylikeobject,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isarraylikeobject-$1/" \
+ https://registry.npmjs.org/@types/lodash.isarraylikeobject https://registry.npmjs.org/@types/lodash.isarraylikeobject/-/lodash.isarraylikeobject-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isboolean,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isboolean-$1/" \
+ https://registry.npmjs.org/@types/lodash.isboolean https://registry.npmjs.org/@types/lodash.isboolean/-/lodash.isboolean-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isbuffer,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isbuffer-$1/" \
+ https://registry.npmjs.org/@types/lodash.isbuffer https://registry.npmjs.org/@types/lodash.isbuffer/-/lodash.isbuffer-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isdate,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isdate-$1/" \
+ https://registry.npmjs.org/@types/lodash.isdate https://registry.npmjs.org/@types/lodash.isdate/-/lodash.isdate-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-iselement,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-iselement-$1/" \
+ https://registry.npmjs.org/@types/lodash.iselement https://registry.npmjs.org/@types/lodash.iselement/-/lodash.iselement-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isempty,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isempty-$1/" \
+ https://registry.npmjs.org/@types/lodash.isempty https://registry.npmjs.org/@types/lodash.isempty/-/lodash.isempty-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isequal,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isequal-$1/" \
+ https://registry.npmjs.org/@types/lodash.isequal https://registry.npmjs.org/@types/lodash.isequal/-/lodash.isequal-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isequalwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isequalwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.isequalwith https://registry.npmjs.org/@types/lodash.isequalwith/-/lodash.isequalwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-iserror,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-iserror-$1/" \
+ https://registry.npmjs.org/@types/lodash.iserror https://registry.npmjs.org/@types/lodash.iserror/-/lodash.iserror-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isfinite,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isfinite-$1/" \
+ https://registry.npmjs.org/@types/lodash.isfinite https://registry.npmjs.org/@types/lodash.isfinite/-/lodash.isfinite-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isfunction,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isfunction-$1/" \
+ https://registry.npmjs.org/@types/lodash.isfunction https://registry.npmjs.org/@types/lodash.isfunction/-/lodash.isfunction-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isinteger,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isinteger-$1/" \
+ https://registry.npmjs.org/@types/lodash.isinteger https://registry.npmjs.org/@types/lodash.isinteger/-/lodash.isinteger-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-islength,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-islength-$1/" \
+ https://registry.npmjs.org/@types/lodash.islength https://registry.npmjs.org/@types/lodash.islength/-/lodash.islength-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-ismap,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-ismap-$1/" \
+ https://registry.npmjs.org/@types/lodash.ismap https://registry.npmjs.org/@types/lodash.ismap/-/lodash.ismap-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-ismatch,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-ismatch-$1/" \
+ https://registry.npmjs.org/@types/lodash.ismatch https://registry.npmjs.org/@types/lodash.ismatch/-/lodash.ismatch-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-ismatchwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-ismatchwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.ismatchwith https://registry.npmjs.org/@types/lodash.ismatchwith/-/lodash.ismatchwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isnan,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isnan-$1/" \
+ https://registry.npmjs.org/@types/lodash.isnan https://registry.npmjs.org/@types/lodash.isnan/-/lodash.isnan-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isnative,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isnative-$1/" \
+ https://registry.npmjs.org/@types/lodash.isnative https://registry.npmjs.org/@types/lodash.isnative/-/lodash.isnative-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isnil,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isnil-$1/" \
+ https://registry.npmjs.org/@types/lodash.isnil https://registry.npmjs.org/@types/lodash.isnil/-/lodash.isnil-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isnull,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isnull-$1/" \
+ https://registry.npmjs.org/@types/lodash.isnull https://registry.npmjs.org/@types/lodash.isnull/-/lodash.isnull-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isnumber,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isnumber-$1/" \
+ https://registry.npmjs.org/@types/lodash.isnumber https://registry.npmjs.org/@types/lodash.isnumber/-/lodash.isnumber-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isobject,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isobject-$1/" \
+ https://registry.npmjs.org/@types/lodash.isobject https://registry.npmjs.org/@types/lodash.isobject/-/lodash.isobject-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isobjectlike,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isobjectlike-$1/" \
+ https://registry.npmjs.org/@types/lodash.isobjectlike https://registry.npmjs.org/@types/lodash.isobjectlike/-/lodash.isobjectlike-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isplainobject,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isplainobject-$1/" \
+ https://registry.npmjs.org/@types/lodash.isplainobject https://registry.npmjs.org/@types/lodash.isplainobject/-/lodash.isplainobject-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isregexp,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isregexp-$1/" \
+ https://registry.npmjs.org/@types/lodash.isregexp https://registry.npmjs.org/@types/lodash.isregexp/-/lodash.isregexp-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-issafeinteger,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-issafeinteger-$1/" \
+ https://registry.npmjs.org/@types/lodash.issafeinteger https://registry.npmjs.org/@types/lodash.issafeinteger/-/lodash.issafeinteger-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isset,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isset-$1/" \
+ https://registry.npmjs.org/@types/lodash.isset https://registry.npmjs.org/@types/lodash.isset/-/lodash.isset-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isstring,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isstring-$1/" \
+ https://registry.npmjs.org/@types/lodash.isstring https://registry.npmjs.org/@types/lodash.isstring/-/lodash.isstring-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-issymbol,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-issymbol-$1/" \
+ https://registry.npmjs.org/@types/lodash.issymbol https://registry.npmjs.org/@types/lodash.issymbol/-/lodash.issymbol-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-istypedarray,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-istypedarray-$1/" \
+ https://registry.npmjs.org/@types/lodash.istypedarray https://registry.npmjs.org/@types/lodash.istypedarray/-/lodash.istypedarray-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isundefined,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isundefined-$1/" \
+ https://registry.npmjs.org/@types/lodash.isundefined https://registry.npmjs.org/@types/lodash.isundefined/-/lodash.isundefined-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isweakmap,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isweakmap-$1/" \
+ https://registry.npmjs.org/@types/lodash.isweakmap https://registry.npmjs.org/@types/lodash.isweakmap/-/lodash.isweakmap-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-isweakset,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-isweakset-$1/" \
+ https://registry.npmjs.org/@types/lodash.isweakset https://registry.npmjs.org/@types/lodash.isweakset/-/lodash.isweakset-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-iteratee,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-iteratee-$1/" \
+ https://registry.npmjs.org/@types/lodash.iteratee https://registry.npmjs.org/@types/lodash.iteratee/-/lodash.iteratee-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-join,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-join-$1/" \
+ https://registry.npmjs.org/@types/lodash.join https://registry.npmjs.org/@types/lodash.join/-/lodash.join-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-kebabcase,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-kebabcase-$1/" \
+ https://registry.npmjs.org/@types/lodash.kebabcase https://registry.npmjs.org/@types/lodash.kebabcase/-/lodash.kebabcase-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-keyby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-keyby-$1/" \
+ https://registry.npmjs.org/@types/lodash.keyby https://registry.npmjs.org/@types/lodash.keyby/-/lodash.keyby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-keys,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-keys-$1/" \
+ https://registry.npmjs.org/@types/lodash.keys https://registry.npmjs.org/@types/lodash.keys/-/lodash.keys-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-keysin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-keysin-$1/" \
+ https://registry.npmjs.org/@types/lodash.keysin https://registry.npmjs.org/@types/lodash.keysin/-/lodash.keysin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-last,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-last-$1/" \
+ https://registry.npmjs.org/@types/lodash.last https://registry.npmjs.org/@types/lodash.last/-/lodash.last-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-lastindexof,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-lastindexof-$1/" \
+ https://registry.npmjs.org/@types/lodash.lastindexof https://registry.npmjs.org/@types/lodash.lastindexof/-/lodash.lastindexof-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-lowercase,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-lowercase-$1/" \
+ https://registry.npmjs.org/@types/lodash.lowercase https://registry.npmjs.org/@types/lodash.lowercase/-/lodash.lowercase-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-lowerfirst,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-lowerfirst-$1/" \
+ https://registry.npmjs.org/@types/lodash.lowerfirst https://registry.npmjs.org/@types/lodash.lowerfirst/-/lodash.lowerfirst-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-lt,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-lt-$1/" \
+ https://registry.npmjs.org/@types/lodash.lt https://registry.npmjs.org/@types/lodash.lt/-/lodash.lt-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-lte,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-lte-$1/" \
+ https://registry.npmjs.org/@types/lodash.lte https://registry.npmjs.org/@types/lodash.lte/-/lodash.lte-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-map,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-map-$1/" \
+ https://registry.npmjs.org/@types/lodash.map https://registry.npmjs.org/@types/lodash.map/-/lodash.map-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-mapkeys,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-mapkeys-$1/" \
+ https://registry.npmjs.org/@types/lodash.mapkeys https://registry.npmjs.org/@types/lodash.mapkeys/-/lodash.mapkeys-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-mapvalues,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-mapvalues-$1/" \
+ https://registry.npmjs.org/@types/lodash.mapvalues https://registry.npmjs.org/@types/lodash.mapvalues/-/lodash.mapvalues-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-matches,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-matches-$1/" \
+ https://registry.npmjs.org/@types/lodash.matches https://registry.npmjs.org/@types/lodash.matches/-/lodash.matches-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-matchesproperty,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-matchesproperty-$1/" \
+ https://registry.npmjs.org/@types/lodash.matchesproperty https://registry.npmjs.org/@types/lodash.matchesproperty/-/lodash.matchesproperty-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-max,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-max-$1/" \
+ https://registry.npmjs.org/@types/lodash.max https://registry.npmjs.org/@types/lodash.max/-/lodash.max-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-maxby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-maxby-$1/" \
+ https://registry.npmjs.org/@types/lodash.maxby https://registry.npmjs.org/@types/lodash.maxby/-/lodash.maxby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-mean,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-mean-$1/" \
+ https://registry.npmjs.org/@types/lodash.mean https://registry.npmjs.org/@types/lodash.mean/-/lodash.mean-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-meanby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-meanby-$1/" \
+ https://registry.npmjs.org/@types/lodash.meanby https://registry.npmjs.org/@types/lodash.meanby/-/lodash.meanby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-memoize,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-memoize-$1/" \
+ https://registry.npmjs.org/@types/lodash.memoize https://registry.npmjs.org/@types/lodash.memoize/-/lodash.memoize-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-merge,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-merge-$1/" \
+ https://registry.npmjs.org/@types/lodash.merge https://registry.npmjs.org/@types/lodash.merge/-/lodash.merge-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-mergewith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-mergewith-$1/" \
+ https://registry.npmjs.org/@types/lodash.mergewith https://registry.npmjs.org/@types/lodash.mergewith/-/lodash.mergewith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-method,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-method-$1/" \
+ https://registry.npmjs.org/@types/lodash.method https://registry.npmjs.org/@types/lodash.method/-/lodash.method-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-methodof,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-methodof-$1/" \
+ https://registry.npmjs.org/@types/lodash.methodof https://registry.npmjs.org/@types/lodash.methodof/-/lodash.methodof-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-min,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-min-$1/" \
+ https://registry.npmjs.org/@types/lodash.min https://registry.npmjs.org/@types/lodash.min/-/lodash.min-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-minby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-minby-$1/" \
+ https://registry.npmjs.org/@types/lodash.minby https://registry.npmjs.org/@types/lodash.minby/-/lodash.minby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-mixin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-mixin-$1/" \
+ https://registry.npmjs.org/@types/lodash.mixin https://registry.npmjs.org/@types/lodash.mixin/-/lodash.mixin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-multiply,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-multiply-$1/" \
+ https://registry.npmjs.org/@types/lodash.multiply https://registry.npmjs.org/@types/lodash.multiply/-/lodash.multiply-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-negate,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-negate-$1/" \
+ https://registry.npmjs.org/@types/lodash.negate https://registry.npmjs.org/@types/lodash.negate/-/lodash.negate-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-noop,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-noop-$1/" \
+ https://registry.npmjs.org/@types/lodash.noop https://registry.npmjs.org/@types/lodash.noop/-/lodash.noop-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-now,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-now-$1/" \
+ https://registry.npmjs.org/@types/lodash.now https://registry.npmjs.org/@types/lodash.now/-/lodash.now-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-nth,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-nth-$1/" \
+ https://registry.npmjs.org/@types/lodash.nth https://registry.npmjs.org/@types/lodash.nth/-/lodash.nth-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-ntharg,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-ntharg-$1/" \
+ https://registry.npmjs.org/@types/lodash.ntharg https://registry.npmjs.org/@types/lodash.ntharg/-/lodash.ntharg-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-omit,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-omit-$1/" \
+ https://registry.npmjs.org/@types/lodash.omit https://registry.npmjs.org/@types/lodash.omit/-/lodash.omit-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-omitby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-omitby-$1/" \
+ https://registry.npmjs.org/@types/lodash.omitby https://registry.npmjs.org/@types/lodash.omitby/-/lodash.omitby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-once,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-once-$1/" \
+ https://registry.npmjs.org/@types/lodash.once https://registry.npmjs.org/@types/lodash.once/-/lodash.once-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-orderby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-orderby-$1/" \
+ https://registry.npmjs.org/@types/lodash.orderby https://registry.npmjs.org/@types/lodash.orderby/-/lodash.orderby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-over,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-over-$1/" \
+ https://registry.npmjs.org/@types/lodash.over https://registry.npmjs.org/@types/lodash.over/-/lodash.over-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-overargs,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-overargs-$1/" \
+ https://registry.npmjs.org/@types/lodash.overargs https://registry.npmjs.org/@types/lodash.overargs/-/lodash.overargs-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-overevery,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-overevery-$1/" \
+ https://registry.npmjs.org/@types/lodash.overevery https://registry.npmjs.org/@types/lodash.overevery/-/lodash.overevery-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-oversome,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-oversome-$1/" \
+ https://registry.npmjs.org/@types/lodash.oversome https://registry.npmjs.org/@types/lodash.oversome/-/lodash.oversome-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pad,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pad-$1/" \
+ https://registry.npmjs.org/@types/lodash.pad https://registry.npmjs.org/@types/lodash.pad/-/lodash.pad-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-padend,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-padend-$1/" \
+ https://registry.npmjs.org/@types/lodash.padend https://registry.npmjs.org/@types/lodash.padend/-/lodash.padend-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-padstart,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-padstart-$1/" \
+ https://registry.npmjs.org/@types/lodash.padstart https://registry.npmjs.org/@types/lodash.padstart/-/lodash.padstart-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-parseint,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-parseint-$1/" \
+ https://registry.npmjs.org/@types/lodash.parseint https://registry.npmjs.org/@types/lodash.parseint/-/lodash.parseint-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-partial,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-partial-$1/" \
+ https://registry.npmjs.org/@types/lodash.partial https://registry.npmjs.org/@types/lodash.partial/-/lodash.partial-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-partialright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-partialright-$1/" \
+ https://registry.npmjs.org/@types/lodash.partialright https://registry.npmjs.org/@types/lodash.partialright/-/lodash.partialright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-partition,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-partition-$1/" \
+ https://registry.npmjs.org/@types/lodash.partition https://registry.npmjs.org/@types/lodash.partition/-/lodash.partition-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pick,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pick-$1/" \
+ https://registry.npmjs.org/@types/lodash.pick https://registry.npmjs.org/@types/lodash.pick/-/lodash.pick-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pickby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pickby-$1/" \
+ https://registry.npmjs.org/@types/lodash.pickby https://registry.npmjs.org/@types/lodash.pickby/-/lodash.pickby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-property,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-property-$1/" \
+ https://registry.npmjs.org/@types/lodash.property https://registry.npmjs.org/@types/lodash.property/-/lodash.property-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-propertyof,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-propertyof-$1/" \
+ https://registry.npmjs.org/@types/lodash.propertyof https://registry.npmjs.org/@types/lodash.propertyof/-/lodash.propertyof-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pull,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pull-$1/" \
+ https://registry.npmjs.org/@types/lodash.pull https://registry.npmjs.org/@types/lodash.pull/-/lodash.pull-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pullall,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pullall-$1/" \
+ https://registry.npmjs.org/@types/lodash.pullall https://registry.npmjs.org/@types/lodash.pullall/-/lodash.pullall-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pullallby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pullallby-$1/" \
+ https://registry.npmjs.org/@types/lodash.pullallby https://registry.npmjs.org/@types/lodash.pullallby/-/lodash.pullallby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pullallwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pullallwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.pullallwith https://registry.npmjs.org/@types/lodash.pullallwith/-/lodash.pullallwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-pullat,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-pullat-$1/" \
+ https://registry.npmjs.org/@types/lodash.pullat https://registry.npmjs.org/@types/lodash.pullat/-/lodash.pullat-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-random,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-random-$1/" \
+ https://registry.npmjs.org/@types/lodash.random https://registry.npmjs.org/@types/lodash.random/-/lodash.random-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-range,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-range-$1/" \
+ https://registry.npmjs.org/@types/lodash.range https://registry.npmjs.org/@types/lodash.range/-/lodash.range-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-rangeright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-rangeright-$1/" \
+ https://registry.npmjs.org/@types/lodash.rangeright https://registry.npmjs.org/@types/lodash.rangeright/-/lodash.rangeright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-rearg,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-rearg-$1/" \
+ https://registry.npmjs.org/@types/lodash.rearg https://registry.npmjs.org/@types/lodash.rearg/-/lodash.rearg-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-reduce,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-reduce-$1/" \
+ https://registry.npmjs.org/@types/lodash.reduce https://registry.npmjs.org/@types/lodash.reduce/-/lodash.reduce-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-reduceright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-reduceright-$1/" \
+ https://registry.npmjs.org/@types/lodash.reduceright https://registry.npmjs.org/@types/lodash.reduceright/-/lodash.reduceright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-reject,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-reject-$1/" \
+ https://registry.npmjs.org/@types/lodash.reject https://registry.npmjs.org/@types/lodash.reject/-/lodash.reject-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-remove,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-remove-$1/" \
+ https://registry.npmjs.org/@types/lodash.remove https://registry.npmjs.org/@types/lodash.remove/-/lodash.remove-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-repeat,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-repeat-$1/" \
+ https://registry.npmjs.org/@types/lodash.repeat https://registry.npmjs.org/@types/lodash.repeat/-/lodash.repeat-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-replace,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-replace-$1/" \
+ https://registry.npmjs.org/@types/lodash.replace https://registry.npmjs.org/@types/lodash.replace/-/lodash.replace-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-rest,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-rest-$1/" \
+ https://registry.npmjs.org/@types/lodash.rest https://registry.npmjs.org/@types/lodash.rest/-/lodash.rest-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-result,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-result-$1/" \
+ https://registry.npmjs.org/@types/lodash.result https://registry.npmjs.org/@types/lodash.result/-/lodash.result-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-reverse,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-reverse-$1/" \
+ https://registry.npmjs.org/@types/lodash.reverse https://registry.npmjs.org/@types/lodash.reverse/-/lodash.reverse-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-round,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-round-$1/" \
+ https://registry.npmjs.org/@types/lodash.round https://registry.npmjs.org/@types/lodash.round/-/lodash.round-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sample,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sample-$1/" \
+ https://registry.npmjs.org/@types/lodash.sample https://registry.npmjs.org/@types/lodash.sample/-/lodash.sample-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-samplesize,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-samplesize-$1/" \
+ https://registry.npmjs.org/@types/lodash.samplesize https://registry.npmjs.org/@types/lodash.samplesize/-/lodash.samplesize-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-set,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-set-$1/" \
+ https://registry.npmjs.org/@types/lodash.set https://registry.npmjs.org/@types/lodash.set/-/lodash.set-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-setwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-setwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.setwith https://registry.npmjs.org/@types/lodash.setwith/-/lodash.setwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-shuffle,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-shuffle-$1/" \
+ https://registry.npmjs.org/@types/lodash.shuffle https://registry.npmjs.org/@types/lodash.shuffle/-/lodash.shuffle-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-size,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-size-$1/" \
+ https://registry.npmjs.org/@types/lodash.size https://registry.npmjs.org/@types/lodash.size/-/lodash.size-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-slice,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-slice-$1/" \
+ https://registry.npmjs.org/@types/lodash.slice https://registry.npmjs.org/@types/lodash.slice/-/lodash.slice-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-snakecase,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-snakecase-$1/" \
+ https://registry.npmjs.org/@types/lodash.snakecase https://registry.npmjs.org/@types/lodash.snakecase/-/lodash.snakecase-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-some,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-some-$1/" \
+ https://registry.npmjs.org/@types/lodash.some https://registry.npmjs.org/@types/lodash.some/-/lodash.some-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sortby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sortby-$1/" \
+ https://registry.npmjs.org/@types/lodash.sortby https://registry.npmjs.org/@types/lodash.sortby/-/lodash.sortby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sortedindex,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sortedindex-$1/" \
+ https://registry.npmjs.org/@types/lodash.sortedindex https://registry.npmjs.org/@types/lodash.sortedindex/-/lodash.sortedindex-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sortedindexby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sortedindexby-$1/" \
+ https://registry.npmjs.org/@types/lodash.sortedindexby https://registry.npmjs.org/@types/lodash.sortedindexby/-/lodash.sortedindexby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sortedindexof,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sortedindexof-$1/" \
+ https://registry.npmjs.org/@types/lodash.sortedindexof https://registry.npmjs.org/@types/lodash.sortedindexof/-/lodash.sortedindexof-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sortedlastindex,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sortedlastindex-$1/" \
+ https://registry.npmjs.org/@types/lodash.sortedlastindex https://registry.npmjs.org/@types/lodash.sortedlastindex/-/lodash.sortedlastindex-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sortedlastindexby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sortedlastindexby-$1/" \
+ https://registry.npmjs.org/@types/lodash.sortedlastindexby https://registry.npmjs.org/@types/lodash.sortedlastindexby/-/lodash.sortedlastindexby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sortedlastindexof,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sortedlastindexof-$1/" \
+ https://registry.npmjs.org/@types/lodash.sortedlastindexof https://registry.npmjs.org/@types/lodash.sortedlastindexof/-/lodash.sortedlastindexof-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sorteduniq,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sorteduniq-$1/" \
+ https://registry.npmjs.org/@types/lodash.sorteduniq https://registry.npmjs.org/@types/lodash.sorteduniq/-/lodash.sorteduniq-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sorteduniqby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sorteduniqby-$1/" \
+ https://registry.npmjs.org/@types/lodash.sorteduniqby https://registry.npmjs.org/@types/lodash.sorteduniqby/-/lodash.sorteduniqby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-split,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-split-$1/" \
+ https://registry.npmjs.org/@types/lodash.split https://registry.npmjs.org/@types/lodash.split/-/lodash.split-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-spread,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-spread-$1/" \
+ https://registry.npmjs.org/@types/lodash.spread https://registry.npmjs.org/@types/lodash.spread/-/lodash.spread-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-startcase,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-startcase-$1/" \
+ https://registry.npmjs.org/@types/lodash.startcase https://registry.npmjs.org/@types/lodash.startcase/-/lodash.startcase-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-startswith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-startswith-$1/" \
+ https://registry.npmjs.org/@types/lodash.startswith https://registry.npmjs.org/@types/lodash.startswith/-/lodash.startswith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-stubfalse,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-stubfalse-$1/" \
+ https://registry.npmjs.org/@types/lodash.stubfalse https://registry.npmjs.org/@types/lodash.stubfalse/-/lodash.stubfalse-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-stubtrue,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-stubtrue-$1/" \
+ https://registry.npmjs.org/@types/lodash.stubtrue https://registry.npmjs.org/@types/lodash.stubtrue/-/lodash.stubtrue-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-subtract,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-subtract-$1/" \
+ https://registry.npmjs.org/@types/lodash.subtract https://registry.npmjs.org/@types/lodash.subtract/-/lodash.subtract-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sum,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sum-$1/" \
+ https://registry.npmjs.org/@types/lodash.sum https://registry.npmjs.org/@types/lodash.sum/-/lodash.sum-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-sumby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-sumby-$1/" \
+ https://registry.npmjs.org/@types/lodash.sumby https://registry.npmjs.org/@types/lodash.sumby/-/lodash.sumby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tail,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tail-$1/" \
+ https://registry.npmjs.org/@types/lodash.tail https://registry.npmjs.org/@types/lodash.tail/-/lodash.tail-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-take,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-take-$1/" \
+ https://registry.npmjs.org/@types/lodash.take https://registry.npmjs.org/@types/lodash.take/-/lodash.take-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-takeright,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-takeright-$1/" \
+ https://registry.npmjs.org/@types/lodash.takeright https://registry.npmjs.org/@types/lodash.takeright/-/lodash.takeright-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-takerightwhile,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-takerightwhile-$1/" \
+ https://registry.npmjs.org/@types/lodash.takerightwhile https://registry.npmjs.org/@types/lodash.takerightwhile/-/lodash.takerightwhile-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-takewhile,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-takewhile-$1/" \
+ https://registry.npmjs.org/@types/lodash.takewhile https://registry.npmjs.org/@types/lodash.takewhile/-/lodash.takewhile-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-template,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-template-$1/" \
+ https://registry.npmjs.org/@types/lodash.template https://registry.npmjs.org/@types/lodash.template/-/lodash.template-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-throttle,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-throttle-$1/" \
+ https://registry.npmjs.org/@types/lodash.throttle https://registry.npmjs.org/@types/lodash.throttle/-/lodash.throttle-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-times,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-times-$1/" \
+ https://registry.npmjs.org/@types/lodash.times https://registry.npmjs.org/@types/lodash.times/-/lodash.times-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-toarray,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-toarray-$1/" \
+ https://registry.npmjs.org/@types/lodash.toarray https://registry.npmjs.org/@types/lodash.toarray/-/lodash.toarray-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tofinite,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tofinite-$1/" \
+ https://registry.npmjs.org/@types/lodash.tofinite https://registry.npmjs.org/@types/lodash.tofinite/-/lodash.tofinite-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tointeger,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tointeger-$1/" \
+ https://registry.npmjs.org/@types/lodash.tointeger https://registry.npmjs.org/@types/lodash.tointeger/-/lodash.tointeger-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tolength,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tolength-$1/" \
+ https://registry.npmjs.org/@types/lodash.tolength https://registry.npmjs.org/@types/lodash.tolength/-/lodash.tolength-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tolower,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tolower-$1/" \
+ https://registry.npmjs.org/@types/lodash.tolower https://registry.npmjs.org/@types/lodash.tolower/-/lodash.tolower-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tonumber,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tonumber-$1/" \
+ https://registry.npmjs.org/@types/lodash.tonumber https://registry.npmjs.org/@types/lodash.tonumber/-/lodash.tonumber-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-topairs,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-topairs-$1/" \
+ https://registry.npmjs.org/@types/lodash.topairs https://registry.npmjs.org/@types/lodash.topairs/-/lodash.topairs-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-topairsin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-topairsin-$1/" \
+ https://registry.npmjs.org/@types/lodash.topairsin https://registry.npmjs.org/@types/lodash.topairsin/-/lodash.topairsin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-topath,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-topath-$1/" \
+ https://registry.npmjs.org/@types/lodash.topath https://registry.npmjs.org/@types/lodash.topath/-/lodash.topath-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-toplainobject,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-toplainobject-$1/" \
+ https://registry.npmjs.org/@types/lodash.toplainobject https://registry.npmjs.org/@types/lodash.toplainobject/-/lodash.toplainobject-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tosafeinteger,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tosafeinteger-$1/" \
+ https://registry.npmjs.org/@types/lodash.tosafeinteger https://registry.npmjs.org/@types/lodash.tosafeinteger/-/lodash.tosafeinteger-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-tostring,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-tostring-$1/" \
+ https://registry.npmjs.org/@types/lodash.tostring https://registry.npmjs.org/@types/lodash.tostring/-/lodash.tostring-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-toupper,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-toupper-$1/" \
+ https://registry.npmjs.org/@types/lodash.toupper https://registry.npmjs.org/@types/lodash.toupper/-/lodash.toupper-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-transform,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-transform-$1/" \
+ https://registry.npmjs.org/@types/lodash.transform https://registry.npmjs.org/@types/lodash.transform/-/lodash.transform-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-trim,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-trim-$1/" \
+ https://registry.npmjs.org/@types/lodash.trim https://registry.npmjs.org/@types/lodash.trim/-/lodash.trim-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-trimend,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-trimend-$1/" \
+ https://registry.npmjs.org/@types/lodash.trimend https://registry.npmjs.org/@types/lodash.trimend/-/lodash.trimend-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-trimstart,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-trimstart-$1/" \
+ https://registry.npmjs.org/@types/lodash.trimstart https://registry.npmjs.org/@types/lodash.trimstart/-/lodash.trimstart-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-truncate,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-truncate-$1/" \
+ https://registry.npmjs.org/@types/lodash.truncate https://registry.npmjs.org/@types/lodash.truncate/-/lodash.truncate-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-unary,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-unary-$1/" \
+ https://registry.npmjs.org/@types/lodash.unary https://registry.npmjs.org/@types/lodash.unary/-/lodash.unary-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-unescape,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-unescape-$1/" \
+ https://registry.npmjs.org/@types/lodash.unescape https://registry.npmjs.org/@types/lodash.unescape/-/lodash.unescape-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-union,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-union-$1/" \
+ https://registry.npmjs.org/@types/lodash.union https://registry.npmjs.org/@types/lodash.union/-/lodash.union-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-unionby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-unionby-$1/" \
+ https://registry.npmjs.org/@types/lodash.unionby https://registry.npmjs.org/@types/lodash.unionby/-/lodash.unionby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-unionwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-unionwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.unionwith https://registry.npmjs.org/@types/lodash.unionwith/-/lodash.unionwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-uniq,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-uniq-$1/" \
+ https://registry.npmjs.org/@types/lodash.uniq https://registry.npmjs.org/@types/lodash.uniq/-/lodash.uniq-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-uniqby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-uniqby-$1/" \
+ https://registry.npmjs.org/@types/lodash.uniqby https://registry.npmjs.org/@types/lodash.uniqby/-/lodash.uniqby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-uniqueid,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-uniqueid-$1/" \
+ https://registry.npmjs.org/@types/lodash.uniqueid https://registry.npmjs.org/@types/lodash.uniqueid/-/lodash.uniqueid-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-uniqwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-uniqwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.uniqwith https://registry.npmjs.org/@types/lodash.uniqwith/-/lodash.uniqwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-unset,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-unset-$1/" \
+ https://registry.npmjs.org/@types/lodash.unset https://registry.npmjs.org/@types/lodash.unset/-/lodash.unset-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-unzip,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-unzip-$1/" \
+ https://registry.npmjs.org/@types/lodash.unzip https://registry.npmjs.org/@types/lodash.unzip/-/lodash.unzip-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-unzipwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-unzipwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.unzipwith https://registry.npmjs.org/@types/lodash.unzipwith/-/lodash.unzipwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-update,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-update-$1/" \
+ https://registry.npmjs.org/@types/lodash.update https://registry.npmjs.org/@types/lodash.update/-/lodash.update-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-updatewith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-updatewith-$1/" \
+ https://registry.npmjs.org/@types/lodash.updatewith https://registry.npmjs.org/@types/lodash.updatewith/-/lodash.updatewith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-uppercase,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-uppercase-$1/" \
+ https://registry.npmjs.org/@types/lodash.uppercase https://registry.npmjs.org/@types/lodash.uppercase/-/lodash.uppercase-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-upperfirst,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-upperfirst-$1/" \
+ https://registry.npmjs.org/@types/lodash.upperfirst https://registry.npmjs.org/@types/lodash.upperfirst/-/lodash.upperfirst-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-values,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-values-$1/" \
+ https://registry.npmjs.org/@types/lodash.values https://registry.npmjs.org/@types/lodash.values/-/lodash.values-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-valuesin,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-valuesin-$1/" \
+ https://registry.npmjs.org/@types/lodash.valuesin https://registry.npmjs.org/@types/lodash.valuesin/-/lodash.valuesin-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-without,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-without-$1/" \
+ https://registry.npmjs.org/@types/lodash.without https://registry.npmjs.org/@types/lodash.without/-/lodash.without-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-words,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-words-$1/" \
+ https://registry.npmjs.org/@types/lodash.words https://registry.npmjs.org/@types/lodash.words/-/lodash.words-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-wrap,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-wrap-$1/" \
+ https://registry.npmjs.org/@types/lodash.wrap https://registry.npmjs.org/@types/lodash.wrap/-/lodash.wrap-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-xor,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-xor-$1/" \
+ https://registry.npmjs.org/@types/lodash.xor https://registry.npmjs.org/@types/lodash.xor/-/lodash.xor-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-xorby,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-xorby-$1/" \
+ https://registry.npmjs.org/@types/lodash.xorby https://registry.npmjs.org/@types/lodash.xorby/-/lodash.xorby-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-xorwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-xorwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.xorwith https://registry.npmjs.org/@types/lodash.xorwith/-/lodash.xorwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-zip,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-zip-$1/" \
+ https://registry.npmjs.org/@types/lodash.zip https://registry.npmjs.org/@types/lodash.zip/-/lodash.zip-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-zipobject,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-zipobject-$1/" \
+ https://registry.npmjs.org/@types/lodash.zipobject https://registry.npmjs.org/@types/lodash.zipobject/-/lodash.zipobject-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-zipobjectdeep,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-zipobjectdeep-$1/" \
+ https://registry.npmjs.org/@types/lodash.zipobjectdeep https://registry.npmjs.org/@types/lodash.zipobjectdeep/-/lodash.zipobjectdeep-([\d\.]+)@ARCHIVE_EXT@ chechsum
+
+opts="searchmode=plain,component=types-lodash-zipwith,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-lodash-zipwith-$1/" \
+ https://registry.npmjs.org/@types/lodash.zipwith https://registry.npmjs.org/@types/lodash.zipwith/-/lodash.zipwith-([\d\.]+)@ARCHIVE_EXT@ chechsum
