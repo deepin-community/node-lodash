@@ -1,0 +1,16 @@
+Description: disable (broken) internal minification
+Forwarded: not-needed
+Last-Update: 2022-04-07
+Author: Jérémy Lal <kapouer@melix.org>
+--- a/lib/fp/build-dist.js
++++ b/lib/fp/build-dist.js
+@@ -47,8 +47,7 @@
+ function build() {
+   async.series([
+     _.partial(webpack, mappingConfig),
+-    _.partial(webpack, fpConfig),
+-    file.min(path.join(distPath, filename))
++    _.partial(webpack, fpConfig)
+   ], util.pitch);
+ }
+ 

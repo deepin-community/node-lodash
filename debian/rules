@@ -1,4 +1,52 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+# Tell nodejs to look for embedded modules
+export NODE_PATH := ${CURDIR}
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	mkdir -p dist
+	node lodash-cli/bin/lodash modularize exports=node -o modules
+	node lodash-cli/bin/lodash modularize exports=npm -o packages
+	node lodash-cli/bin/lodash modularize exports=es -o es
+	node lodash-cli/bin/lodash -d -o dist/lodash.js
+	node lodash-cli/bin/lodash core -d -o dist/lodash.core.js
+	uglifyjs -o dist/lodash.min.js dist/lodash.js
+	uglifyjs -o dist/lodash.core.min.js dist/lodash.core.js
+	node lib/main/build-modules.js modules
+	node lib/fp/build-modules.js modules
+	node lib/fp/build-dist.js
+	uglifyjs -o dist/lodash.fp.min.js dist/lodash.fp.js
+	dh_auto_build
+
+override_dh_auto_install:
+	dh_auto_install --buildsystem=nodejs
+	find debian/tmp/usr/share/nodejs/@types -type f -exec chmod -x '{}' \;
+
+override_dh_install:
+	dh_install
+	mv debian/node-lodash/usr/share/nodejs/lodash/modules/fp/* debian/node-lodash/usr/share/nodejs/lodash/fp/
+	rmdir debian/node-lodash/usr/share/nodejs/lodash/modules/fp
+	mv -v debian/node-lodash/usr/share/nodejs/lodash/modules/* debian/node-lodash/usr/share/nodejs/lodash/
+	rmdir debian/node-lodash/usr/share/nodejs/lodash/modules
+	mv -v debian/node-lodash/usr/share/nodejs/lodash/dist/* debian/node-lodash/usr/share/nodejs/lodash/
+	rmdir debian/node-lodash/usr/share/nodejs/lodash/dist
+	mkdir debian/node-lodash/usr/share/nodejs/lodash-es
+	mv debian/node-lodash/usr/share/nodejs/lodash/es/* debian/node-lodash/usr/share/nodejs/lodash-es/
+
+override_dh_fixperms:
+	dh_fixperms
+	chmod +x debian/node-lodash/usr/share/nodejs/lodash-cli/bin/lodash
+
+override_dh_gencontrol:
+	PACKAGESPROVIDED=`grep -sh 'nodejs:Provides' debian/*.substvars|head -n1|sed -e 's/nodejs:Provides=//'`; \
+		TMP=`echo $$PACKAGESPROVIDED|egrep 'lodash\.'`; \
+		dh_gencontrol -pnode-lodash-packages -- -Vpackages:Provides="$$TMP"; \
+		TMP=`echo $$PACKAGESPROVIDED|egrep -v 'lodash\.'`; \
+		dh_gencontrol -pnode-lodash -- -Vlodash:Provides="$$TMP"; \
+	dh_gencontrol -plibjs-lodash

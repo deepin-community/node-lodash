@@ -1,0 +1,14 @@
+Adapt for webpack version 4
+
+--- a/lib/fp/build-dist.js
++++ b/lib/fp/build-dist.js
+@@ -22,8 +22,7 @@
+     'libraryTarget': 'umd'
+   },
+   'plugins': [
+-    new webpack.optimize.OccurenceOrderPlugin,
+-    new webpack.optimize.DedupePlugin
++    new webpack.optimize.OccurrenceOrderPlugin,
+   ]
+ };
+ 

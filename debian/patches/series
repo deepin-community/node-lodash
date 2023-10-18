@@ -1,0 +1,4 @@
+support-globalThis.diff
+webpack-4-compat.patch
+fp_no_min.patch
+fix-for-webpack5.patch
