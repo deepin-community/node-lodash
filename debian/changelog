@@ -1,3 +1,10 @@
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-10) unstable; urgency=medium
+
+  * Fix CVE-2026-4800: validate imports keys in _.template to prevent
+    code injection.
+
+ -- deepin-ci-robot <packages@deepin.org>  Wed, 15 Apr 2026 13:11:12 +0800
+
 node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-9) unstable; urgency=medium
 
   * Team upload
