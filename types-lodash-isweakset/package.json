@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.isweakset",
-    "version": "4.3.6",
-    "description": "TypeScript definitions for lodash.isWeakSet",
+    "version": "4.3.9",
+    "description": "TypeScript definitions for lodash.isweakset",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.isweakset",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "51d7de57a549589f8e6557278d6e58c79043def4799e018346edec2599578ce2",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "9f4082b23e60c1b916de2f3f35ff4529fe7db6efbf071a9b5ef400b46fcdcbc0",
+    "typeScriptVersion": "4.5"
 }

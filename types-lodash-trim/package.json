@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.trim",
-    "version": "4.5.6",
+    "version": "4.5.9",
     "description": "TypeScript definitions for lodash.trim",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.trim",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "9f1c97ee730b68e29f71c8a2614ed8efa8a6cac31e9b84fb729c4daa1ac93fa4",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "f60311a5ac74326942268b45a7bb91c41ad3986d2e1085578da1bcee8369992a",
+    "typeScriptVersion": "4.5"
 }

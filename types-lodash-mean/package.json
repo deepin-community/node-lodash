@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.mean",
-    "version": "4.1.6",
+    "version": "4.1.9",
     "description": "TypeScript definitions for lodash.mean",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.mean",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "a4bfc7e662c72cb04a95d421f6f32a0240219c9f154124caa19353f7734b4489",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "c7d9ec8878c6af8d551f919ff53d5e09c096ebbced026bbb0170bc8acbd34eef",
+    "typeScriptVersion": "4.5"
 }

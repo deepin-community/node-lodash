@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.pullallwith",
-    "version": "4.7.3",
-    "description": "TypeScript definitions for lodash.pullAllWith",
+    "version": "4.7.6",
+    "description": "TypeScript definitions for lodash.pullallwith",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.pullallwith",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "b2fdf365ba354b7842dc1e265c89cafb749a8004bcfc0247666433d10450c78a",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "c40a14a446f829dd6199d26a6484586ff601bb0bf6dac6196f7518cb9c9b35fd",
+    "typeScriptVersion": "4.5"
 }

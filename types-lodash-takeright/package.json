@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.takeright",
-    "version": "4.1.6",
-    "description": "TypeScript definitions for lodash.takeRight",
+    "version": "4.1.9",
+    "description": "TypeScript definitions for lodash.takeright",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.takeright",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "d21bdc2f49e93d70634adac4dcfb65ec6aa0b0a68ca12c3ae5c108dbb72a3234",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "23683fadd0cfcc9a034fbb94dab02187d784dfa7b040490d7feb30dbd9af928e",
+    "typeScriptVersion": "4.5"
 }

@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.isnull",
-    "version": "3.0.6",
-    "description": "TypeScript definitions for lodash.isNull",
+    "version": "3.0.9",
+    "description": "TypeScript definitions for lodash.isnull",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.isnull",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "66c8b10d4a5a413c8195e445f2c83d3c521433d014704076ee0a32b2374c3301",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "f37616edd7ae1d4b76707c3c457d26b5b1851f010377a27029c6e2cb4b75a0b0",
+    "typeScriptVersion": "4.5"
 }

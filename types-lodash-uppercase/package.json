@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.uppercase",
-    "version": "4.3.6",
-    "description": "TypeScript definitions for lodash.upperCase",
+    "version": "4.3.9",
+    "description": "TypeScript definitions for lodash.uppercase",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.uppercase",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "3d39e135ad8f5d856023132056b8e5f6451d8a1cc30ff76aef6c6f1d31b0c4d7",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "199959a2b2351c46453955dda2c5158b399d89c7e189a226a1359915cd18da9d",
+    "typeScriptVersion": "4.5"
 }

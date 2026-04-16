@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.split",
-    "version": "4.4.6",
+    "version": "4.4.9",
     "description": "TypeScript definitions for lodash.split",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.split",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "2baca72a9e53da591e78e5ded15e23ff5b2e06fc94be397d0f7eab2ed5555270",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "221970483acb8af705ccbe4fd52899f8057eb3b2343d7e14ce1b578035ab3538",
+    "typeScriptVersion": "4.5"
 }
