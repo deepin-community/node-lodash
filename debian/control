@@ -1,13 +1,12 @@
 Source: node-lodash
 Section: javascript
-Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Valentin OVD <valentin.ovd@live.fr>,
            Matthew Pideil <matthewp_debian@teledetection.fr>,
            Pirate Praveen <praveen@debian.org>
 Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
- , uglifyjs
+ , uglifyjs (>= 3)
 # for lodash/fp
  , node-async
  , node-fs-extra
@@ -15,12 +14,11 @@ Build-Depends: debhelper-compat (= 13)
 # for lodash-cli
  , node-glob
  , node-semver
-Standards-Version: 4.6.1
+Standards-Version: 4.7.4
 Vcs-Browser: https://salsa.debian.org/js-team/node-lodash
 Vcs-Git: https://salsa.debian.org/js-team/node-lodash.git
 Homepage: https://lodash.com/
 Testsuite: autopkgtest-pkg-nodejs
-Rules-Requires-Root: no
 
 Package: node-lodash
 Architecture: all

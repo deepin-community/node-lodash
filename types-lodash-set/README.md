@@ -2,15 +2,22 @@
 > `npm install --save @types/lodash.set`
 
 # Summary
-This package contains type definitions for lodash.set ( https://lodash.com ).
+This package contains type definitions for lodash.set (https://lodash.com).
 
 # Details
-Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.set
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.set.
+## [index.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.set/index.d.ts)
+````ts
+// Generated from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/lodash/scripts/generate-modules.ts
 
-Additional Details
- * Last updated: Mon, 04 Mar 2019 23:26:46 GMT
- * Dependencies: @types/lodash
- * Global values: none
+import { set } from "lodash";
+export = set;
+
+````
+
+### Additional Details
+ * Last updated: Tue, 07 Nov 2023 09:09:38 GMT
+ * Dependencies: [@types/lodash](https://npmjs.com/package/@types/lodash)
 
 # Credits
-These definitions were written by Brian Zengel <https://github.com/bczengel>, Ilya Mochalov <https://github.com/chrootsu>, Stepan Mikhaylyuk <https://github.com/stepancar>.
+These definitions were written by [Brian Zengel](https://github.com/bczengel), and [Ilya Mochalov](https://github.com/chrootsu).

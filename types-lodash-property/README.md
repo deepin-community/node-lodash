@@ -2,15 +2,22 @@
 > `npm install --save @types/lodash.property`
 
 # Summary
-This package contains type definitions for lodash.property ( https://lodash.com ).
+This package contains type definitions for lodash.property (https://lodash.com).
 
 # Details
-Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.property
+Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.property.
+## [index.d.ts](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.property/index.d.ts)
+````ts
+// Generated from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/lodash/scripts/generate-modules.ts
 
-Additional Details
- * Last updated: Mon, 04 Mar 2019 23:26:44 GMT
- * Dependencies: @types/lodash
- * Global values: none
+import { property } from "lodash";
+export = property;
+
+````
+
+### Additional Details
+ * Last updated: Tue, 07 Nov 2023 09:09:38 GMT
+ * Dependencies: [@types/lodash](https://npmjs.com/package/@types/lodash)
 
 # Credits
-These definitions were written by Brian Zengel <https://github.com/bczengel>, Ilya Mochalov <https://github.com/chrootsu>, Stepan Mikhaylyuk <https://github.com/stepancar>.
+These definitions were written by [Brian Zengel](https://github.com/bczengel), and [Ilya Mochalov](https://github.com/chrootsu).

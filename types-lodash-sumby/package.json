@@ -1,27 +1,23 @@
 {
     "name": "@types/lodash.sumby",
-    "version": "4.6.6",
-    "description": "TypeScript definitions for lodash.sumBy",
+    "version": "4.6.9",
+    "description": "TypeScript definitions for lodash.sumby",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash.sumby",
     "license": "MIT",
     "contributors": [
         {
             "name": "Brian Zengel",
-            "url": "https://github.com/bczengel",
-            "githubUsername": "bczengel"
+            "githubUsername": "bczengel",
+            "url": "https://github.com/bczengel"
         },
         {
             "name": "Ilya Mochalov",
-            "url": "https://github.com/chrootsu",
-            "githubUsername": "chrootsu"
-        },
-        {
-            "name": "Stepan Mikhaylyuk",
-            "url": "https://github.com/stepancar",
-            "githubUsername": "stepancar"
+            "githubUsername": "chrootsu",
+            "url": "https://github.com/chrootsu"
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -31,6 +27,6 @@
     "dependencies": {
         "@types/lodash": "*"
     },
-    "typesPublisherContentHash": "4676864798f57b10bff3900606294d53b9621719d69c95bbc9018465ff54e885",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "f683110f8c1ef43fafce89f7d0a66a33e2baffcd8d08c873bcc27f00758f54bd",
+    "typeScriptVersion": "4.5"
 }

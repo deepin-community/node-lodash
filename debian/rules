@@ -21,6 +21,7 @@ override_dh_auto_build:
 	node lib/main/build-modules.js modules
 	node lib/fp/build-modules.js modules
 	node lib/fp/build-dist.js
+	sed -i 's/assignWith/assignInWith/g' packages/lodash.template/index.js
 	uglifyjs -o dist/lodash.fp.min.js dist/lodash.fp.js
 	dh_auto_build
 

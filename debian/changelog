@@ -1,3 +1,41 @@
+node-lodash (4.18.1+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix broken lodash.template: replace undefined assignWith with assignInWith
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 11 Apr 2026 20:32:02 +0200
+
+node-lodash (4.18.1+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.7.4
+  * Drop "Priority: optional"
+  * New upstream version (Closes: #1132500, CVE-2026-4800)
+  * Unfuzz patches
+
+ -- Yadd <yadd@debian.org>  Thu, 02 Apr 2026 08:53:53 +0200
+
+node-lodash (4.17.23+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.7.3
+  * Drop "Rules-Requires-Root: no"
+  * debian/watch version 5
+  * New upstream version 4.17.23+dfsg
+  * Refresh patches
+  * Require uglifyjs >=3 to avoid old node-uglify which is deprecated and
+    sadly exports "uglifyjs" virtual package
+
+ -- Yadd <yadd@debian.org>  Fri, 06 Feb 2026 18:07:43 +0100
+
+node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-10) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to prevent prototype pollution on baseUnset function.
+    (Fixes: CVE-2025-13465) (Closes: #1126265)
+
+ -- Utkarsh Gupta <utkarsh@debian.org>  Sun, 01 Feb 2026 21:38:42 +0530
+
 node-lodash (4.17.21+dfsg+~cs8.31.198.20210220-9) unstable; urgency=medium
 
   * Team upload
